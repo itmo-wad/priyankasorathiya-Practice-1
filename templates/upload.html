@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practice 1 - Upload</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <h1>Upload</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <div class="content">
+        <form method="post" enctype="multipart/form-data">
+            <div>
+                <b><label for="image">Image</label></b>
+            </div>
+            <br/>
+            <div>
+                <input type="file" name="file">
+            </div>
+            <br/>
+            <input type="submit" value="Upload">
+        </form>
+        <br/>
+    </div>
+    <p><a href="/">Home</a></p>
+</body>
+
+</html>

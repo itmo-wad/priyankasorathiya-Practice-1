@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practice 1 - Auth</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <h1>Authentification</h1>
+    {% if bad_login %}
+    <p class="text-danger">Invalid username or password</p>
+    {% endif %}
+    <div class="content">
+        <form method="post">
+            <div>
+                <b><label for="username">Username</label></b>
+            </div>
+            <div>
+                <input type="text" name="username" placeholder="username"></input>
+            </div>
+            <div>
+                <b><label for="password">Password</label></b>
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="password"></input>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
